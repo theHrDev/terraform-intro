@@ -1,19 +1,19 @@
-resource "aws_instance" "instances" {
-  for_each = toset(var.inst_name)
-  ami                    = var.ami_id
-  instance_type          = var.instance_type
+# resource "aws_instance" "instances" {
+#   for_each = toset(var.inst_name)
+#   ami                    = var.ami_id
+#   instance_type          = var.instance_type
 
-  vpc_security_group_ids = [
-    each.value == "frontend" ?  aws_security_group.frontend_sg.id:
-    each.value == "backend" ? aws_security_group.backend_sg.id:
-    aws_security_group.database_sg.id
+#   vpc_security_group_ids = [
+#     each.value == "frontend" ?  aws_security_group.frontend_sg.id:
+#     each.value == "backend" ? aws_security_group.backend_sg.id:
+#     aws_security_group.database_sg.id
 
-  ]
-  key_name = aws_key_pair.app_key_pair.key_name
-  tags = {
-    Name = each.value
-  }
-}
+#   ]
+#   key_name = aws_key_pair.app_key_pair.key_name
+#   tags = {
+#     Name = each.value
+#   }
+# }
 
 
 # resource "aws_instance" "backend" {
