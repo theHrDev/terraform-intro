@@ -23,8 +23,8 @@ variable "inst_name" {
 
 variable "inst_conf" {
   default = {
-    mobile  = { ami = "ami-0bdc7d025135d7b49", type = "t3.micro" }
-    desktop = { ami = "ami-0bdc7d025135d7b49", type = "t3.micro" }
-    web     = { ami = "ami-0b6d9d3d33ba97d99", type = "t3.small" }
+    mobile  = { ami = "ami-0332d564d76dbd8d6", type = "t3.micro" }
+    desktop = { ami = "ami-0b6d9d3d33ba97d99", type = "t3.small" } #ubuntu
+    web     = { ami = "ami-02b3d83d84b07786d", type = "t3.micro" }
   }
 }
