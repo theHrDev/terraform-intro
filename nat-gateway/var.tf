@@ -1,8 +1,8 @@
 variable "ami" {
   type = string
-  default = "value"
+  default = "ami-051c6296b8d2535f1"
 }
 variable "instance_type" {
   type = string
-  default = "value"
+  default = "t3.micro"
 }
